@@ -15,9 +15,12 @@ FoamFile {
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-implicitAdvection false;
-implicitSource true;
-CrankNicolsonAlpha 1;
+implicitSource false;
+implicitConservation false;
+CrankNicolsonAlpha 0.;
+numberOfCorrectors 1;
+operatorSplitting 0;
+timeScale 1;
 
 solvers
 {

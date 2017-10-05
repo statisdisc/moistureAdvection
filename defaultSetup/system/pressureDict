@@ -3,10 +3,10 @@ FoamFile {
     format      ascii;
     class       dictionary;
     location    "constant";
-    object	    tempDict;
+    object	    pressureDict;
 }
 
 type		        temperatureGradient;
 gradientType        "exponential";
 centre              (0 0 0);
-centralValue        300;
+centralValue        100000;
