@@ -19,8 +19,9 @@ implicitSource false;
 implicitConservation false;
 CrankNicolsonAlpha 0.;
 numberOfCorrectors 1;
-operatorSplitting 0;
-timeScale 1;
+operatorSplitting 1;
+opSplitOffCenterCoefficient 0.;
+timeScale 1.;
 
 solvers
 {

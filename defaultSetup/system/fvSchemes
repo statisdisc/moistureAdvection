@@ -25,6 +25,7 @@ ddtSchemes
 divSchemes
 {
     default         Gauss vanLeer;
+    //default         Gauss upwind;
     //default         Gauss linearUpwind linearUpwind;
 }
 
