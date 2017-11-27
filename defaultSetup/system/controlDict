@@ -14,8 +14,8 @@ FoamFile {
     writeControl    runTime;
     writeInterval   20;
     purgeWrite      0;
-    writeFormat     ascii;
-    writePrecision  12;
+    writeFormat     binary;
+    writePrecision  6;
     writeCompression uncompressed;
     timeFormat      general;
     timePrecision   12;

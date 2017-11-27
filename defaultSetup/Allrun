@@ -16,39 +16,40 @@ setMoistureVariables
 #Evolve the system.
 advectMoistureFoam #>& log & sleep 0.01; tail -f log
 
-#Move files for future diagnostics.
-cp 0/rl rl_0_prognostic.dat
-cp 0/rv rv_0_prognostic.dat
-cp 0/rt rt_0_diagnostic.dat
-cp 0/rl_diag rl_0_diagnostic.dat
-cp 0/rv_diag rv_0_diagnostic.dat
-cp 0/rl_analytic rl_0_analytic.dat
-cp 0/rv_analytic rv_0_analytic.dat
-cp 0/rt_analytic rt_0_analytic.dat
-sumFields 0 rt_0_prognostic.dat 0 rl 0 rv -scale1 1
-mv 0/rt_0_prognostic.dat ./
+## Why are you doing all this?
+##Move files for future diagnostics.
+#cp 0/rl rl_0_prognostic.dat
+#cp 0/rv rv_0_prognostic.dat
+#cp 0/rt rt_0_diagnostic.dat
+#cp 0/rl_diag rl_0_diagnostic.dat
+#cp 0/rv_diag rv_0_diagnostic.dat
+#cp 0/rl_analytic rl_0_analytic.dat
+#cp 0/rv_analytic rv_0_analytic.dat
+#cp 0/rt_analytic rt_0_analytic.dat
+#sumFields 0 rt_0_prognostic.dat 0 rl 0 rv -scale1 1
+#mv 0/rt_0_prognostic.dat ./
 
-cp 300/rl rl_300_prognostic.dat
-cp 300/rv rv_300_prognostic.dat
-cp 300/rt rt_300_diagnostic.dat
-cp 300/rl_diag rl_300_diagnostic.dat
-cp 300/rv_diag rv_300_diagnostic.dat
-cp 300/rl_analytic rl_300_analytic.dat
-cp 300/rv_analytic rv_300_analytic.dat
-cp 300/rt_analytic rt_300_analytic.dat
-sumFields 300 rt_300_prognostic.dat 300 rl 300 rv -scale1 1
-mv 300/rt_300_prognostic.dat ./
+#cp 300/rl rl_300_prognostic.dat
+#cp 300/rv rv_300_prognostic.dat
+#cp 300/rt rt_300_diagnostic.dat
+#cp 300/rl_diag rl_300_diagnostic.dat
+#cp 300/rv_diag rv_300_diagnostic.dat
+#cp 300/rl_analytic rl_300_analytic.dat
+#cp 300/rv_analytic rv_300_analytic.dat
+#cp 300/rt_analytic rt_300_analytic.dat
+#sumFields 300 rt_300_prognostic.dat 300 rl 300 rv -scale1 1
+#mv 300/rt_300_prognostic.dat ./
 
-cp 600/rl rl_600_prognostic.dat
-cp 600/rv rv_600_prognostic.dat
-cp 600/rt rt_600_diagnostic.dat
-cp 600/rl_diag rl_600_diagnostic.dat
-cp 600/rv_diag rv_600_diagnostic.dat
-cp 600/rl_analytic rl_600_analytic.dat
-cp 600/rv_analytic rv_600_analytic.dat
-cp 600/rt_analytic rt_600_analytic.dat
-sumFields 600 rt_600_prognostic.dat 600 rl 600 rv -scale1 1
-mv 600/rt_600_prognostic.dat ./
+#cp 600/rl rl_600_prognostic.dat
+#cp 600/rv rv_600_prognostic.dat
+#cp 600/rt rt_600_diagnostic.dat
+#cp 600/rl_diag rl_600_diagnostic.dat
+#cp 600/rv_diag rv_600_diagnostic.dat
+#cp 600/rl_analytic rl_600_analytic.dat
+#cp 600/rv_analytic rv_600_analytic.dat
+#cp 600/rt_analytic rt_600_analytic.dat
+#sumFields 600 rt_600_prognostic.dat 600 rl 600 rv -scale1 1
+#mv 600/rt_600_prognostic.dat ./
 
 gmtFoam rl -time 1800
 gmtFoam rv -time 1800
