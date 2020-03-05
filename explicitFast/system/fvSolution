@@ -15,13 +15,13 @@ FoamFile {
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-implicitSource false;
-implicitConservation false;
-CrankNicolsonAlpha 0.;
-numberOfCorrectors 1;
+implicitSource true;
+implicitConservation true;
+CrankNicolsonAlpha 0.5;
+numberOfCorrectors 3;
 operatorSplitting 0;
-opSplitOffCenterCoefficient 0.;
-timeScale 1;
+opSplitOffCenterCoefficient 1.;
+timeScale 0.45;
 
 solvers
 {

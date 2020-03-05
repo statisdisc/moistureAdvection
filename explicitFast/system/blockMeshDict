@@ -18,11 +18,11 @@ convertToMeters 1000;
 
 xmin  -2;
 xmax  2;
-nx    200;
+nx    100;
 
 zmin  -1;
 zmax  3;
-nz    200;
+nz    100;
 
 vertices
 (
